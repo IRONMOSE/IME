@@ -174,4 +174,21 @@ footer{background:#071727;color:#cbd5df;padding:28px 0;font-size:.87rem}footer .
 document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('quote-form').addEventListener('submit',function(e){e.preventDefault();const f=new FormData(this);const body=encodeURIComponent('Name: '+f.get('name')+'\\nPhone: '+f.get('phone')+'\\nEmail: '+f.get('email')+'\\nService: '+f.get('service')+'\\n\\nDetails:\\n'+f.get('details'));window.location.href='mailto:justin@ironmoseelectric.com?subject='+encodeURIComponent('Iron Mose Electric — Quote Request')+'&body='+body;});
 </script>
+<script>
+  const servicesDropdown = document.querySelector('.services-menu');
+
+  if (servicesDropdown) {
+    servicesDropdown.addEventListener('mouseenter', function () {
+      if (window.matchMedia('(hover: hover)').matches) {
+        this.open = true;
+      }
+    });
+
+    servicesDropdown.addEventListener('mouseleave', function () {
+      if (window.matchMedia('(hover: hover)').matches) {
+        this.open = false;
+      }
+    });
+  }
+</script>
 </body></html>
