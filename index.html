@@ -110,6 +110,16 @@ footer{background:#071727;color:#cbd5df;padding:28px 0;font-size:.87rem}footer .
     justify-content: space-between;
   }
 }
+/* Show the dropdown when hovering with a mouse. */
+@media (hover: hover) {
+  .services-menu:hover > .services-dropdown {
+    display: block;
+  }
+
+  .services-menu:hover > summary::after {
+    content: " ▴";
+  }
+}
 </style>
 </head>
 <body>
